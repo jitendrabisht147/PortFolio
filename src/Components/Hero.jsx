@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import img1 from '../assets/piccmyy.png'
 import { FaWhatsapp, FaLinkedinIn, FaGithub, FaInstagram } from 'react-icons/fa'
-import { MdOutlineFileDownload } from 'react-icons/md'
+import { FiDownload, } from 'react-icons/fi'
 import { IoIosArrowRoundForward } from 'react-icons/io'
 import { FiCode } from 'react-icons/fi'
 const resume = '/Jitendra-Bisht-Resume.pdf'
 
 const roles = [
+  'MERN Stack Developer',
   'React Developer',
-  'Web Developer',
-  'MERN-Stack Developer',
-  'Problem Solver'
-]     
+  'Node.js Developer'
+]
 
 const Hero = () => {
   const [currentText, setCurrentText] = useState('')
@@ -41,8 +40,8 @@ const Hero = () => {
   }, [currentText, isDeleting, roleIndex])
 
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="relative bg-[#F8FAFC] dark:bg-[#0B0F17] min-h-[calc(100vh-80px)] flex items-center py-10 sm:py-14 overflow-hidden transition-colors duration-300"
     >
       {/* Background Soft Blur (Adapts for light and dark) */}
@@ -50,11 +49,11 @@ const Hero = () => {
 
       <div className="max-w-6xl mx-auto px-6 sm:px-8 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          
+
           {/* ================= 1. CIRCULAR IMAGE CONTAINER ================= */}
           <div className="lg:col-span-5 order-1 lg:order-2 flex justify-center items-center">
             <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[440px] lg:h-[440px] select-none">
-              
+
               {/* Circular Backplate Accent */}
               <div className="absolute -inset-3 rounded-full bg-slate-200/80 dark:bg-slate-800/80 rotate-2 pointer-events-none -z-0 transition-colors duration-300"></div>
 
@@ -79,7 +78,7 @@ const Hero = () => {
 
           {/* ================= 2. CONTENT ================= */}
           <div className="lg:col-span-7 order-2 lg:order-1 text-center lg:text-left mt-4 lg:mt-0">
-            
+
             {/* Status Pill */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white dark:bg-slate-900/90 border border-slate-200/90 dark:border-slate-800 shadow-2xs mb-5 transition-colors duration-300">
               <span className="relative flex h-2 w-2">
@@ -98,7 +97,7 @@ const Hero = () => {
 
             {/* Dynamic Typing Role */}
             <div className="mt-2.5 flex items-center justify-center lg:justify-start gap-2 h-9">
-              
+
               <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-indigo-600 dark:text-indigo-400 tracking-tight transition-colors duration-300">
                 {currentText}
               </span>
@@ -107,7 +106,7 @@ const Hero = () => {
 
             {/* Professional Summary */}
             <p className="mt-4 text-base sm:text-lg font-normal text-slate-600 dark:text-slate-400 leading-relaxed max-w-xl mx-auto lg:mx-0 transition-colors duration-300">
-              I architect performant, maintainable client-side applications with <strong className="font-semibold text-slate-900 dark:text-slate-100">React</strong> and modern JavaScript ecosystems. Paired with practical backend competencies, I bridge clean interface aesthetics with reliable system integrations.
+              I build full-stack web applications with the MERN stack, from responsive React interfaces to secure REST APIs and authentication. I focus on clean code, solid performance, and user experiences that feel smooth on every device.
             </p>
 
             {/* Action Buttons */}
@@ -123,10 +122,10 @@ const Hero = () => {
               <a
                 href={resume}
                 download
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3 rounded-xl bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 font-semibold text-sm border border-slate-200 dark:border-slate-800 shadow-2xs hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 hover:border-indigo-400 dark:hover:border-indigo-500 text-sm font-semibold px-5 py-3 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#F8FAFC] dark:focus-visible:ring-offset-[#0B0F17]"
               >
-                <span>Download Resume</span>
-                <MdOutlineFileDownload className="text-lg text-slate-500 dark:text-slate-400" />
+                Download resume
+                <FiDownload aria-hidden="true" />
               </a>
             </div>
 

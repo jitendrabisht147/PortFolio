@@ -1,7 +1,6 @@
 import React from 'react'
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa'
 import { FiArrowUp } from 'react-icons/fi'
-import { FaRegCopyright } from "react-icons/fa";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -9,45 +8,45 @@ const Footer = () => {
   }
 
   return (
-    <footer className="bg-slate-900 border-t mb-0 border-slate-800 py-12 text-slate-400">
-      <div className="max-w-6xl mx-auto px-6  lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <footer className="bg-slate-950 border-t border-slate-800/80 py-8 text-slate-400">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         
         {/* Brand / Copyright */}
-        <div className="text-center sm:text-left">
+        <div className="text-center sm:text-left space-y-1">
           <p className="text-sm text-slate-300 font-medium">
             Designed & Built by <span className="text-white font-semibold">Jitendra Bisht</span>
           </p>
-          <p className="text-xs text-slate-500 mt-1 flex gap-2 items-center">
-          <FaRegCopyright /> {new Date().getFullYear()} All rights reserved.
+          <p className="text-xs text-slate-500">
+            © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
 
         {/* Quick Socials & Back to Top */}
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-4">
           <a
-            href="https://github.com/nikhilbisht147-ship-it"
+            href="https://github.com/jitendrabisht147"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="hover:text-white transition-colors"
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-all"
           >
-            <FaGithub className="text-lg" />
+            <FaGithub className="text-base" />
           </a>
           <a
             href="https://www.linkedin.com/in/jitendra-bisht-0458382a9/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="hover:text-white transition-colors"
+            className="p-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-400 hover:text-white transition-all"
           >
-            <FaLinkedinIn className="text-lg" />
+            <FaLinkedinIn className="text-base" />
           </a>
 
           <button
             type="button"
             onClick={scrollToTop}
             aria-label="Back to top"
-            className="p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-all cursor-pointer"
+            className="p-2 rounded-lg bg-slate-800 border border-slate-700 text-slate-300 hover:text-white hover:bg-slate-700 transition-all cursor-pointer"
           >
             <FiArrowUp className="text-base" />
           </button>

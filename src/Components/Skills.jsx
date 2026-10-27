@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-
-// Asset imports
 import html from '../assets/html5.png'
 import css from '../assets/css.png'
 import tailwind from '../assets/tail.png'
@@ -23,12 +21,12 @@ const skillsData = [
   { id: 5, img: tailwind, name: 'Tailwind CSS', category: 'Frontend' },
   { id: 6, img: bootstrap, name: 'Bootstrap', category: 'Frontend' },
   { id: 7, img: node, name: 'Node.js', category: 'Backend' },
-  { id: 8, img: express, name: 'Express.js', category: 'Backend' },
+  { id: 8, img: express, name: 'Express.js', category: 'Backend', invertDark: true },
   { id: 9, img: mongodb, name: 'MongoDB', category: 'Backend' },
-  { id: 10, img: git, name: 'Git', category: 'Tools' },
-  { id: 11, img: github, name: 'GitHub', category: 'Tools' },
-  { id: 12, img: vercel, name: 'Vercel', category: 'Tools' },
-  { id: 13, img: render, name: 'Render', category: 'Tools' },
+  { id: 10, img: git, name: 'Git', category: 'Tools' }, 
+  { id: 11, img: github, name: 'GitHub', category: 'Tools', invertDark: true },
+  { id: 12, img: vercel, name: 'Vercel', category: 'Tools', invertDark: true },
+  { id: 13, img: render, name: 'Render', category: 'Tools', invertDark: true },
 ]
 
 const categories = ['All', 'Frontend', 'Backend', 'Tools']
@@ -87,18 +85,20 @@ const Skills = () => {
               className="
                 group relative bg-white dark:bg-slate-900/90 rounded-2xl p-4 sm:p-5 
                 flex flex-col items-center justify-center 
-                border border-slate-200/90 dark:border-slate-800 shadow-2xs 
+                border border-slate-200/90 dark:border-slate-800 shadow-xs 
                 hover:shadow-md hover:border-indigo-300 dark:hover:border-indigo-500/50 
                 hover:-translate-y-1 transition-all duration-200
               "
             >
               {/* Image Container */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-22 lg:h-22 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800/80 group-hover:bg-indigo-50 dark:group-hover:bg-indigo-950/50 transition-colors duration-200 mb-3 p-2.5 ">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-22 lg:h-22 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800/80 group-hover:bg-indigo-50 dark:group-hover:bg-indigo-950/50 transition-colors duration-200 mb-3 p-2.5">
                 <img
                   src={item.img}
                   alt={`${item.name} logo`}
                   loading="lazy"
-                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-110"
+                  className={`w-full h-full object-contain transition-transform duration-300 group-hover:scale-110 ${
+                    item.invertDark ? 'dark:invert dark:brightness-200' : ''
+                  }`}
                 />
               </div>
 
