@@ -12,11 +12,10 @@ const roles = [
   'Node.js Developer'
 ]
 
-const Hero = () => {
+const Hero = () => {         
   const [currentText, setCurrentText] = useState('')
   const [roleIndex, setRoleIndex] = useState(0)
   const [isDeleting, setIsDeleting] = useState(false)
-
   useEffect(() => {
     const fullText = roles[roleIndex]
     const typingSpeed = isDeleting ? 30 : 75
@@ -70,7 +69,7 @@ const Hero = () => {
               <div className="absolute -bottom-3.5 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200 dark:border-slate-800 shadow-lg shadow-slate-300/40 dark:shadow-black/40 rounded-full px-4 py-2 flex items-center gap-2 transition-colors duration-300">
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
                 <FiCode className="text-indigo-600 dark:text-indigo-400 text-sm" />
-                <span className="text-xs font-bold text-slate-800 dark:text-slate-100 tracking-wide">React & Modern UI</span>
+                <span className="text-xs font-bold text-slate-800 dark:text-slate-100 tracking-wide">MERN stack developer</span>
               </div>
 
             </div>
