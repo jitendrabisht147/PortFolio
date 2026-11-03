@@ -24,7 +24,7 @@ const projects = [
     para: 'Built as a fitness center showcase featuring smooth image sliders, workout program sections, membership tier cards, and clean UI templates.',
     stack: ['HTML5', 'CSS3', 'Bootstrap'],
     githubLink: 'https://github.com/jitendrabisht147/Fitness-Freak.git',
-    liveLink: 'https://fitness-freak-mocha.vercel.app/',
+    liveLink: 'https://fitness-freak-try.vercel.app/',
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const projects = [
     para: 'An AI mock interview platform that generates customized technical questions, delivers instant feedback scorecards, and tracks performance analytics.',
     stack: ['React',  'Tailwind CSS' ,'Node.js', 'Express', 'MongoDB', 'AI Integration'],
     githubLink: 'https://github.com/jitendrabisht147/PrepWise-AI.git',
-    liveLink: 'https://prep-wise-ai-blue.vercel.app/',
+    liveLink: 'https://prepwise-ai-career.vercel.app/',
   },
 ]
 
