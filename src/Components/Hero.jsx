@@ -18,7 +18,7 @@ const Hero = () => {
   const [isDeleting, setIsDeleting] = useState(false)
   useEffect(() => {
     const fullText = roles[roleIndex]
-    const typingSpeed = isDeleting ? 30 : 75
+    const typingSpeed = isDeleting ? 30 : 75 
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
